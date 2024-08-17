@@ -50,7 +50,7 @@ function Dashboard() {
   const indexOfLastItem = currentPage * rowsPerPage;
   const indexOfFirstItem = indexOfLastItem - rowsPerPage;
   const currentItems = userData?.slice(indexOfFirstItem, indexOfLastItem);
-  const totalPages = Math.ceil((userData?.length || 0) / rowsPerPage);
+  let totalPages = Math.ceil((userData?.length || 0) / rowsPerPage);
 
   const lineWidth = 60;
 
@@ -67,7 +67,7 @@ function Dashboard() {
         try {
           const idToken = await user.getIdToken(true); // Force refresh the token if needed
           const res = await axios.get(
-            `https://diverse-erin-zaramen-37a3baa8.koyeb.app/display_user_data/`,
+            `http://localhost:5000/display_user_data/`,
             {
               headers: {
                 Authorization: `Bearer ${idToken}`,
@@ -129,6 +129,15 @@ function Dashboard() {
               ],
             }))
           );
+
+
+          // Handles page changes automatically if the user deletes an item to the last page with data
+          totalPages = Math.ceil((sortedUserData?.length || 0) / rowsPerPage);
+          
+          if (currentPage > totalPages) {
+            setCurrentPage(totalPages);
+          }
+
         } catch (err) {
           console.error(err);
         }
@@ -179,6 +188,8 @@ function Dashboard() {
       dispatch(resetRefresh());
     }
   }, [shouldRefresh, dispatch]);
+
+  useEffect(() => {}, [userData]);
 
   useEffect(() => {
     if (userData) {
