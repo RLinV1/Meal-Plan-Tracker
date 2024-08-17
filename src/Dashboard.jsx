@@ -130,9 +130,9 @@ function Dashboard() {
             }))
           );
 
-
           // Handles page changes automatically if the user deletes an item to the last page with data
-          totalPages = Math.ceil((sortedUserData?.length || 0) / rowsPerPage);
+          // default always show 1 page if there's less than 10 items
+          totalPages = Math.ceil((sortedUserData?.length || 10) / rowsPerPage);
           
           if (currentPage > totalPages) {
             setCurrentPage(totalPages);

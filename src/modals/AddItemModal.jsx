@@ -47,7 +47,7 @@ const AddItemModal = () => {
     try {
       const idToken = await auth.currentUser.getIdToken(true);
       const res = await axios.post(
-        `https://diverse-erin-zaramen-37a3baa8.koyeb.app/add_user_data`,
+        `http://127.0.0.1:5000/add_user_data`,
         {
           name: itemName.trim().toLowerCase(),
           cost: parseFloat(parseFloat(itemCost).toFixed(2)),
@@ -109,6 +109,7 @@ const AddItemModal = () => {
                 value={itemName.toLowerCase()}
                 onChange={(e) => setItemName(e.target.value)}
                 className="p-2 w-full text-lg bg-[#14285c]"
+                required
               />
             </div>
             <div>
@@ -120,6 +121,7 @@ const AddItemModal = () => {
                 value={itemCost}
                 onChange={(e) => setItemCost(e.target.value)}
                 className="p-2 w-full text-lg bg-[#14285c]"
+                required
               />
             </div>
             <div>
@@ -131,6 +133,7 @@ const AddItemModal = () => {
                 value={itemQuantity}
                 onChange={(e) => setItemQuantity(e.target.value)}
                 className="p-2 w-full text-lg bg-[#14285c]"
+                required
               />
             </div>
 
