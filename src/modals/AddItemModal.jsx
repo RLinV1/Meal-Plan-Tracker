@@ -47,7 +47,7 @@ const AddItemModal = () => {
     try {
       const idToken = await auth.currentUser.getIdToken(true);
       const res = await axios.post(
-        `http://127.0.0.1:5000/add_user_data`,
+        `https://diverse-erin-zaramen-37a3baa8.koyeb.app/add_user_data`,
         {
           name: itemName.trim().toLowerCase(),
           cost: parseFloat(parseFloat(itemCost).toFixed(2)),
