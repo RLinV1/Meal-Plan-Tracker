@@ -43,7 +43,7 @@ const DeleteItemModal = ({ itemName }) => {
     e.preventDefault();
     try {
       const idToken = await auth.currentUser.getIdToken(true);
-      const res = await axios.delete(`http://127.0.0.1:5000/delete_item`, {
+      const res = await axios.delete(`https://diverse-erin-zaramen-37a3baa8.koyeb.app/delete_item`, {
         headers: {
           Authorization: `Bearer ${idToken}`,
           "Content-Type": "application/json",

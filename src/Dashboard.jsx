@@ -67,7 +67,7 @@ function Dashboard() {
         try {
           const idToken = await user.getIdToken(true); // Force refresh the token if needed
           const res = await axios.get(
-            `http://127.0.0.1:5000/display_user_data/`,
+            `https://diverse-erin-zaramen-37a3baa8.koyeb.app/display_user_data/`,
             {
               headers: {
                 Authorization: `Bearer ${idToken}`,

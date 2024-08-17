@@ -46,7 +46,7 @@ const EditItemModal = ({ itemName, itemQuantity, itemCost }) => {
     try {
       const idToken = await auth.currentUser.getIdToken(true);
       const res = await axios.patch(
-        `http://127.0.0.1:5000/update_value`,
+        `https://diverse-erin-zaramen-37a3baa8.koyeb.app/update_value`,
         {
           name: itemName,
           quantity: parseInt(quantity),
