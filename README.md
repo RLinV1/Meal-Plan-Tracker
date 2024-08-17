@@ -2,7 +2,8 @@
 
 ## Functionality
 A Meal Plan Tracker App that uses firebase to store data and user authentication.
-Backend is written in python and hosted on koyeb.
+
+Backend is written in python using Flask and hosted on koyeb.
 
 ## How To Use
 1. Sign up with email and password or with a google account and verify your email.
