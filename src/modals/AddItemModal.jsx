@@ -49,7 +49,7 @@ const AddItemModal = () => {
       const res = await axios.post(
         `https://diverse-erin-zaramen-37a3baa8.koyeb.app/add_user_data`,
         {
-          name: itemName.trim().toLowerCase(),
+          name: itemName.trim(),
           cost: parseFloat(parseFloat(itemCost).toFixed(2)),
           quantity: parseInt(itemQuantity),
         },
@@ -106,7 +106,7 @@ const AddItemModal = () => {
               <input
                 type="text"
                 placeholder="Item Name"
-                value={itemName.toLowerCase()}
+                value={itemName}
                 onChange={(e) => setItemName(e.target.value)}
                 className="p-2 w-full text-lg bg-[#14285c]"
                 required
