@@ -102,7 +102,7 @@ const AddItemModal = () => {
             className="flex flex-col gap-6"
           >
             <div>
-              <p className="text-xl mb-2">Name (only lowercase):</p>
+              <p className="text-xl mb-2">Name (case insensitive):</p>
               <input
                 type="text"
                 placeholder="Item Name"
