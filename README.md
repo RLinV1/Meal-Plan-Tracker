@@ -12,4 +12,4 @@ Backend is written in python using Flask and hosted on koyeb.
 4. Add more food items if you want and if you're done you can sign out on the top right corner
 
 ## Site
-![image](https://github.com/user-attachments/assets/3d97dd59-5610-4af4-b5a6-7fdbf859ccb2)
+![image](https://github.com/user-attachments/assets/82381642-6245-492c-a65f-51ca12420de2)
