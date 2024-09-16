@@ -65,7 +65,7 @@ function Dashboard() {
       if (user) {
         // The user is signed in.
         try {
-          const idToken = await user.getIdToken(true); // Force refresh the token if needed
+          const idToken = await user.getIdToken(true); 
           const res = await axios.get(
             `https://diverse-erin-zaramen-37a3baa8.koyeb.app/display_user_data/`,
             {
