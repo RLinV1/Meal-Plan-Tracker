@@ -72,6 +72,7 @@ function Dashboard() {
             {
               headers: {
                 Authorization: `Bearer ${idToken}`,
+                "Content-Type": "application/json",
               },
             }
           );
