@@ -68,7 +68,7 @@ function Dashboard() {
           const idToken = await user.getIdToken(true); 
           console.log(idToken);
           const res = await axios.get(
-            `https://diverse-erin-zaramen-37a3baa8.koyeb.app/display_user_data/`,
+            `https://diverse-erin-zaramen-37a3baa8.koyeb.app/display_user_data`,
             {
               headers: {
                 Authorization: `Bearer ${idToken}`,
