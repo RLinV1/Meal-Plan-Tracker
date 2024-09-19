@@ -71,7 +71,7 @@ function Dashboard() {
             `https://diverse-erin-zaramen-37a3baa8.koyeb.app/display_user_data/`,
             {
               headers: {
-                Authorization: `Bearer ${idToken}`,
+                "Authorization": `Bearer ${idToken}`,
                 "Content-Type": "application/json",
               },
             }
